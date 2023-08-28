@@ -37,5 +37,5 @@ int main(){
    int target =12;
     Solution t;
     cout<<t.minOperations(nums,target);
-    cout<<"cc ne cl me may";
+    
 }
