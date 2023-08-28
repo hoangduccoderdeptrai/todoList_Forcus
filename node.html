@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            [class*="col-"]{
+                width:100%;
+                
+            }
+            @media screen and (min-width: 601px) {
+  /* For desktop: */
+                h1.h1{font-size:100px;};
+            }
+            @media screen and (max-width:600px){
+                h1.h1{font-size:50px;}
+                button.start{
+                    font-size: 5vw;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body id="body">
+        <audio id="audio">
+            <source src="bell.mp3" typpe="audio/mpeg">
+        </audio>
+        <audio id="mouse_bell">
+            <source src="mouse_bell.mp3" type="audio/mpeg">
+        </audio>
+        <div class="header">
+            <div class="icon">
+                <label id="lb" style="font-size:30px;margin-left:200px;">DevCode</label>
+                <span class="spa">
+                    <button class="icon1" id="ic1">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                        </svg>
+                        <label style="margin-right: 10px">Setting</label>
+                    </button >
+                    <button class="icon1" id="ic2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </button>
+                </span>
+            </div>
+        </div>
+        
+        <div class ="id"id="cc">
+           
+            <button id="btn1" class="btn">Pomodoro</button>
+            <button id="btn2" class="btn">Short Break</button>
+            <button id="btn3" class="btn">Long Break</button>
+           
+            <h1 class="h1"id="h1"></h1>
+            <button type="button" id="start" class="start ">Start</button>
+            <button type="button" id="pause" class="start ">Pause</button>
+        </div>
+        <div class="set"id="set">
+            <label class="name">Setting</label>
+            <svg style="float:right" id="x"  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+            </svg>
+           
+            <hr style="margin-top:40px">
+            <div style="margin-left:20px">Time(minutes)</div>
+            <div class="input">
+                <label class="lb1">Pomodoro</label>
+                <label class="lb1">Short Break</label>
+                <label class="lb1">Long Break</label>
+                <br>
+                <input type="number" min="0" class="ip" value="0">
+               
+                <input type="number" min="0" class="ip" value="0">
+               
+                <input type="number" min="0" class="ip" value="0">
+            </div>
+           
+            <p style="margin: 40px 30px;">Auto Start Breaks</p>
+            <label class="switch" style="float:right;margin-top: -60px;">
+                    
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            
+            <br>
+            <p style="margin: 25px 30px;">Auto Start Pomodoros</p>
+            <label class="switch" style="float:right;margin-top: -45px;">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <hr style="margin-top: 40px;">
+            <div>
+                <p>Sound</p>
+                <div class="music">
+                    <button style="width: 100px;height: 40px;background-color: gold;margin-left: 60px;">Alarm Sound</button>
+                    <div class="musi">
+                        <label>Bell</label>
+                        <label>Bird</label>
+                        <label>Digital</label>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="todo">
+            <form>
+                <input type="text" class ="inputvalue"placeholder="Type something!!">
+                <button class="btn-todo">
+                  
+                    <i class="fas fa-plus-circle fa-lg"></i>
+                    
+                </button>
+                <div class="select">
+                    <select name="todos"  class="list">
+                        <option value="All">ALL</option>
+                        <option value="Completed">Completed</option>
+                        <option value="InCompleted">Incompleted</option>
+                    </select>
+                </div>
+            </form>
+
+        </div>
+        <div class="containtertodo">
+            <ul class="todo-list">
+
+            </ul>
+
+        </div>
+    
+    <script src="node.js"> 
+    </script>
+    </body>
+</html>

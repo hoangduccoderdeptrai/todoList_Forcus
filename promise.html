@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="cc.css">
+   <title>Todo list</title>
+
+    <style>
+        @media screen and (min-width:601px){
+            select.filter-select{font-size: 22px;}
+        }
+        @media screen and (max-width:600px){
+            select.filter-select{font-size: 15px;}
+        }
+    </style>
+</head>
+<body>
+    <header>My to do list</header>
+    <form class="todo">
+        <input type="text" id="input">
+        <button type="submit" class="todo-btn">
+            
+            <i class="fa fa-plus-circle" aria-hidden="true" style="font-size:30px"></i>
+            
+            
+        </button>
+        <div class="selection">
+            <select name="todos" class="filter-select">
+                <option value="All" >All</option>
+                <option value="Completed">Completed</option>
+                <option value="InCompleted">InCompleted</option>
+            </select>
+            
+        </div>
+       
+
+    </form>
+    <div class="container-todo">
+        <ul class="todo-list"></ul>
+
+    </div>
+    <script src="temp.js">
+
+    </script>
+</body>
+</html>

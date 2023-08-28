@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    font-size: 2.5rem;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+form input,form button{
+    padding: 20px;
+    font-size: 22px;
+    border-radius:22px;
+    min-width: 50px;
+   
+}
+form button{
+    background-color: rgb(68, 213, 58);
+    cursor: pointer;
+    margin-left: 1rem;
+    transition:all 0.3 ease;
+    
+}
+.selection{
+    position: relative;
+    min-width: 100px;
+    /* margin: 1rem; */
+    margin-left: 1rem;
+    overflow: hidden;
+    border-radius: 40px;
+   
+    
+    
+   
+}
+.filter-select{
+    color:rgb(255,200,0);
+    
+    padding: 1rem;
+    border-radius:40px;
+   
+    
+}
+.selection::after{
+    position: absolute;
+    content: "\25BC";
+    top:0px;
+    right:0px;
+  
+    padding: 1rem;
+    font-size: 30px;
+    pointer-events: none;
+    background-color: gold;
+   
+    
+
+}
+.container-todo{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+
+}
+.todo-list{
+    min-width:10%;
+    list-style: none;
+  
+  
+}
+.todoList{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+    background-color: chartreuse;
+    /* list-style: none; */
+}
+.icon1{
+    position: absolute;
+    top:0;
+    right: 50px;
+    padding: 1rem;
+    background: gold;
+    font-size: 1.5rem;
+    border:none;
+    color:white;
+   
+}
+.icon2{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 1rem;
+    background: rgb(171, 171, 171);
+    font-size: 1.5rem;
+    border:none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  
+}
+/* .todList li{
+    flex:1;
+} */
+.text{
+   
+    padding-right:7rem;
+}
+.fa-check-circle{
+    pointer-events: none;
+}
+.fa-trash{
+    pointer-events:none;
+}
+.slider{
+    transform:translateX(10px);
+    opacity: 0;
+    transition: 1s;
+}
+.completed{
+    text-decoration-line:line-through;
+    opacity:0.5;
+}
+
