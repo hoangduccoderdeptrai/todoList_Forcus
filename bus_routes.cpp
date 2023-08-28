@@ -48,7 +48,7 @@ public:
 };
 int main(){
    
-    string s ="PAYPALISHIRING";
+    string s ="cai lon may noi chi nhieu the";
    
     Solution t;
     string a =t.convert(s,4);
